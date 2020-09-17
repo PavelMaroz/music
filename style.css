@@ -1,0 +1,975 @@
+html,
+body,
+main {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  counter-reset: wrapper;
+}
+
+.header {
+  background: url(./img/header/man1.png) 0 0 no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.header__nav {
+  padding: 10px 200px;
+  background-color: #e5e6e6;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.header__item {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: grey;
+  font-size: 10px;
+  padding: 0 8px;
+  display: inline-block; 
+  margin: 0;
+}
+
+.header__item:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #000;
+  transition: width .2s ease-in-out;
+  margin-top: 2px;
+}
+
+.header__item:hover:after {
+  width: 100%;
+  color: #000;
+}
+
+.header__item:hover {
+  color: #000;
+}
+
+.header__button {
+  border: none;
+  background: url(./img/header/burger.png) 0 0 no-repeat;
+  width: 41px;
+  height: 29px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  display: none;
+}
+
+.header__img {
+  background: url(./img/header/johndoe.png) center center no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.info {
+  padding: 20px 8%;
+  max-width: 36%;
+  margin: 0 auto;
+}
+
+.info_left {
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+} 
+
+.info_small {
+  max-width: 42%;
+}
+
+.info__title {
+  color:  #000000;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 59px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.info__title:after {
+  display: block;
+  content: '';
+  position: relative;
+  border-bottom: 1px solid #000;
+  top: -30px;
+}
+
+.section__title {
+  color:  #000001;
+  font-size: 14.3px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+.section__title_small {
+  line-height: 15px;
+}
+
+.section__title_big {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-top: 0;
+}
+
+
+.section__title_line:after {
+  display: block;
+  content: '';
+  position: relative;
+  border-bottom: 1px solid #000;
+  margin-right: 180px;
+}
+
+.section__title_line {
+  padding: 0;
+}
+
+.info__text {
+  color:  #7a8083;
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.info__text_left {
+  padding: 0;
+  text-align: left;
+  max-width: 70%;
+  margin: 0;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 25px 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 60%;
+}
+
+.section__date, 
+.section__info {
+  width: 50%;
+}
+
+.section__text {
+  font-family: 'Open Sans', sans-serif;
+  color:  #aaaaaa;
+  font-size: 9.85px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.section__text_small {
+  line-height: 18px;
+  text-align: left;
+}
+
+.section__text_left {
+  color:  #000001;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0;
+}
+
+.section__text_white {
+  color: white;
+}
+
+.section__date_top {
+  max-width: 290px;
+  margin: 0;
+}
+
+.section__date:after {
+  display: block;
+  content: '';
+  position: relative;
+  border-top: 1px solid #000;
+  bottom: 25px;
+}
+
+.section__line {
+  border-left: 1px solid black;
+  margin: 0 0 0 15px;
+  height: 25px;
+}
+
+.section__line_long {
+  height: 82px;
+}
+
+.info__title_left {
+  text-align: left;
+  font-size: 37px;
+  margin: 0;
+  max-width: 100%;
+}
+
+.button {
+  border: none;
+  width: calc(196px / 2);
+  height: calc(58px / 2);
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  color:  #ffffff;
+  font-size: 7.5px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button_dark {
+  background: url(./img/section/playfirst.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.button_palm {
+  background: url(./img/section/playsecond.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  color:  #000001;
+}
+
+.button_tree {
+  background: url(./img/section/playthird.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  color:  #000001;
+}
+
+.button_black {
+  color: black;
+  background: none;
+  border: 1px solid gray;
+  margin: 0 0 38px 0;
+}
+
+.button_itunes {
+  margin: 0 auto 0 0;
+}
+
+.section_nature {
+  background: url(./img/section/naturepc.png) 0 0 no-repeat;
+  background-size: cover;
+  min-height: 550px;
+  max-width: 100%;
+}
+
+.section_left {
+  background: url(./img/section/rockpc.png) 0 0 no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 440px;
+}
+
+.section__wrapper {
+  max-width: 60%;
+}
+
+.section_song {
+  padding: 20px 20%;
+}
+
+.section_song:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.section__inner {
+  background-color: rgb(245, 246, 246);
+  padding: 5px 23.5px 25px 23.5px;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0;
+  padding: 5% 15% 0 15%;
+}
+
+.section_small {
+  margin: 10px;
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  max-width: 230px;
+  overflow: hidden;
+}
+
+.section_small:before {
+  counter-increment: wrapper;
+  content: "0" counter(wrapper) " ";
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  right: 10px;
+  bottom: -10px;
+  color: #b9aeab;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.section__inner_small {
+  padding: 10px 17px 0px 17px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: inherit;
+  width: 100%;
+  display: inline-block;
+}
+
+.section_big {
+  min-height: 585px;
+  background: url(./img/section/bridgepc.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  margin-top: 10%;
+  justify-content: flex-end; 
+}
+
+.section__inner_left {
+  background-color: transparent;
+  max-width: 410px;
+  display: inline-block;
+}
+
+.picture {
+  width: 300px;
+  height: 211px;
+  margin: 0 auto;
+}
+
+.section__img {
+  width: 50%;
+}
+
+.section__img_love {
+  background-image: url(./img/picture/love.png);
+  background-size: 100% 100%;
+  width: 50%;
+}
+
+.section__img_life {
+  background-image: url(./img/picture/life.png);
+  background-size: 100% 100%;
+  width: 50%;
+}
+
+.section__img_nation {
+  background-image: url(./img/picture/nation.png);
+  background-size: 100% 100%;
+  width: 50%;
+}
+
+.section__img_small {
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: sub;
+  font-family: 'Myriad Pro';
+  color:  #979898;
+  font-size: 15px;
+  font-weight: 400;
+  margin: auto 0 0 20px;
+  padding: 0 0 0 5px;
+  box-sizing: border-box;
+}
+
+.icon_audio:before {
+  content: "";
+  background-image: url(./img/section/audio.png);
+  background-repeat: no-repeat;
+  margin-left: -15px;
+  width: 13px;
+  position: absolute;
+  height: 16px;
+}
+
+.icon_heart:before {
+  content: "";
+  background-image: url(./img/section/heart.png);
+  background-repeat: no-repeat;
+  margin-left: -20px;
+  width: 16px;
+  position: absolute;
+  height: 14px;
+}
+
+.icon_options:before {
+  content: "";
+  background-image: url(./img/section/options.png);
+  background-repeat: no-repeat;
+  margin-left: -20px;
+  width: 16px;
+  position: absolute;
+  height: 14px;
+}
+
+.icon_bubble:before {
+  content: "";
+  background-image: url(./img/section/bubble.png);
+  background-repeat: no-repeat;
+  margin-left: -20px;
+  width: 15px;
+  position: absolute;
+  height: 15px;
+}
+
+.slider {
+  background: url(./img/slider/oceanpc.png) center center no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.slider__inner {
+  padding: 50px 35.5px 30px 35.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider__title {
+  font-family: 'Myriad Pro';
+  color:  #ffffff;
+  font-size: 8.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 50%;
+}
+
+.slider__text {
+  font-family: 'Open Sans', sans-serif;
+  color:  #7a8083;
+  font-size: 7.5px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  padding: 0 25.5px;
+  max-width: 30%;
+}
+
+.slider__date {
+  font-family: OpenSans;
+  color:  #565e61;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.tours {
+  min-height: 530px;
+  background: url(./img/tours/roadpc.png) center bottom no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.concert__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.concert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.tours__round {
+  width: 5px;
+  height: 5px;
+  margin-top: 5px;
+}
+
+.tours__date {
+  text-transform: uppercase;
+  color: #b2b2b3;
+  margin: 0;
+  padding: 0;
+}
+
+.tours__date_iphone {
+  display: none;
+}
+
+.tours__date_black {
+  color: black;
+}
+
+.tours__line {
+  border-top: 1px solid #b2b4b4;
+  margin: 7px 0 0 0;
+  width: 75px;
+}
+
+.tours__text {
+  color: #5a5a58;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 11%;
+}
+
+.footer {
+  background: url(./img/footer/footerpc.png) center center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 25px 20% 330px 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 45%;
+  margin: 0;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.entryfield {
+  padding-top: 20px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.footer__button {
+  padding: 20px 0 0 0;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  margin: 30px 0px 0px 0px;
+  border-left: 1px solid black;
+  width: 15%;
+}
+
+.footer_img {
+  width: 10px;
+  height: 10px;
+  padding-left: 15px;
+}
+
+.footer__fb {
+  background: url(./img/footer/fb.png) 0 0 no-repeat;
+  width: 8px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.footer__inst {
+  background: url(./img/footer/insta.png) 0 0 no-repeat;
+  width: 19px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.footer__twit {
+  background: url(./img/footer/twiter.png) 0 0 no-repeat;
+  width: 16px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: url(./img/header/man.png) 0 0 no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__button {
+    display: block;
+  }
+
+  .header__img {
+    background: url(./img/header/johndoe.png) center center no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    width: 77%;
+  }
+
+  .button_center {
+    margin: 0 auto;
+  }
+
+  .section {
+    flex-direction: column;
+    max-width: 76%;
+    padding: 25px 12%;
+  }
+
+  .section__inner {
+    width: 100%;
+  }
+
+  .section__wrapper {
+    max-width: 82%;
+  }
+
+  .section_small {
+    margin: 27.5px 20px 0 10px;
+    padding: 0;
+    display: inline-block;
+    max-width: 292px;
+  }
+
+  .section__inner_small {
+    padding: 5px 17px 0px 17px;
+  }
+
+  .section__title {
+    padding-top: 10px;
+  }
+
+  .section_nature {
+    background: url(./img/section/natureipad.png) 0 0 no-repeat;
+  }
+
+  .section_left_wrapper {
+    max-width: 80%;
+  }
+
+  .info {
+    padding: 10px 8%;
+    max-width: 84%;
+  }
+
+  .section__info {
+    width: 100%;
+  }
+
+  .section_song {
+    padding: 10px 10%;
+    max-width: 80%;
+  }
+
+  .section_song:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .section__img {
+    width: 100%;
+    height: 306px;
+  }
+
+  .info_left {
+    padding: 20px 0%;
+  }
+
+  .info__title_left {
+    font-size: 20px;
+    max-width: 55%;
+  }
+
+  .info__title {
+    font-size: 17px;
+    padding-top: 10px;
+  }
+
+  .section__text {
+    font-size: 13.5px;
+    line-height: 24px;
+  }
+
+  .section__text_big {
+    padding: 40px 0;
+  }
+
+  .section__text_small {
+    font-size: 9.5px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .info__text {
+    font-size: 14.5px;
+    line-height: 24px;
+  }
+
+  .section__date-text {
+    font-size: 7.5px;
+    line-height: 24px;
+  }
+
+  .section__title {
+    font-size: 12px;
+  }
+
+  .section_left {
+    background: url(./img/section/rockipad.png) 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  .section_left_wrapper {
+    max-width: 60%;
+  }
+
+  .section__date {
+    width: 100%;
+  }
+
+  .slider {
+    background: url(./img/slider/oceanipad.png) center center no-repeat;
+    background-size: cover;
+  }
+
+  .slider__title {
+    max-width: 100%;
+  }
+
+  .slider__text {
+    max-width: 100%;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .section_big {
+    background: url(./img/section/bridge.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .tours {
+    background: url(./img/tours/roadipad.png) center bottom no-repeat;
+    background-size: cover;
+  }
+
+  .tours__text {
+    width: 20%;
+  }
+
+  .concert {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .concert_pc {
+    display: none;
+  }
+
+  .footer {
+    background: url(./img/footer/footer.png) center center no-repeat;
+    background-size: cover;
+  }
+
+  .footer_wrapper {
+    max-width: 100%;
+  }
+
+  .button_itunes {
+    margin-right: 44%;
+  }
+}
+
+  @media (max-width: 375px) {
+    .header {
+      background: url(./img/header/man.png) 0 0 no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section_small {
+      max-width: 200px;
+    }
+
+    .info {
+      padding: 10px 7%;
+      max-width: 86%;
+    }
+
+    .section_song {
+      padding: 10px 10%;
+      max-width: 80%;
+    }
+
+    .section__date:after {
+      bottom: 13px;
+    }
+
+    .section__wrapper {
+      max-width: 60%;
+    }
+
+    .section__img {
+      width: 100%;
+      height: 220px;
+    }
+
+    .info_left {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    .info__title_left {
+      font-size: 20px;
+      max-width: 80%;
+    }
+
+    .info__title {
+      font-size: 17px;
+    }
+
+    .info__text {
+      font-size: 7.5px;
+      line-height: 18px;
+    }
+
+    .section__text {
+      font-size: 7.5px;
+      line-height: 14px;
+    }
+
+    .section__text_big {
+      padding: 10px 0;
+    }
+
+    .section__date-text {
+      font-size: 7.5px;
+      line-height: 18px;
+    }
+
+    .section__title {
+      font-size: 12px;
+    }
+
+    .section_left {
+      background: url(./img/section/rock.png) 0 0 no-repeat;
+      background-size: cover;
+    }
+
+    .section_left_wrapper {
+      max-width: 60%;
+    }
+
+    .section_nature {
+      background: url(./img/section/nature.png) 0 0 no-repeat;
+    }
+
+    .text {
+      font-size: 7px;
+    }
+
+    .slider {
+      background: url(./img/slider/ocean.png) center center no-repeat;
+      background-size: cover;
+    }
+
+    .concert {
+      width: 65%;
+    }
+
+    .tours {
+      min-height: 275px;
+    }
+
+    .concert_ip {
+      display: none;
+    }
+
+    .tours__text {
+      font-size: 5px;
+      padding: 0;
+    }
+
+    .footer {
+      padding: 25px 20% 330px 20%;
+    }
+
+    .button_itunes {
+      margin-right: 0%;
+    }
+
+    .icon {
+      font-size: 9px;
+      margin-left: 19px;
+    }
+
+    .icon_audio:before,
+    .icon_heart:before,
+    .icon_options:before,
+    .icon_bubble:before {
+      margin-top: -5px;
+    }
+  }
